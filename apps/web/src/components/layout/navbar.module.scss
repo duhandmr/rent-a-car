@@ -1,0 +1,186 @@
+.wrap {
+  background: var(--color-primary, #0d407c);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+
+.brand {
+  width: 72px;
+  height: 1px;
+} /* logo alanı (placeholder) */
+
+/* Masaüstü menü */
+.menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  color: #e6ecf3;
+  text-decoration: none;
+  font-weight: var(--font-semibold, 600);
+  font-size: var(--fs-small, 14px);
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+.link:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.active {
+  background: var(--color-secondary, #ffffff);
+  color: var(--color-primary, #0d407c) !important;
+  border-color: #0b2f5b;
+}
+.active:hover {
+  background: var(--color-secondary, #ffffff);
+  color: var(--brand-navy, #0c356a) !important;
+  border-color: #0b2f5b;
+}
+
+.lang .link {
+  margin-left: 8px;
+}
+
+/* Sağ taraf grubu */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* HAMBURGER – en sağda, mavi arka plan */
+.burgerBtn {
+  display: flex; /* ← block yerine flex */
+  flex-direction: column; /* çizgileri dikey sırala */
+  justify-content: center; /* dikey ortala */
+  align-items: center; /* yatay ortala */
+  gap: 10px; /* çizgiler arası boşluk */
+  width: 60px;
+  height: 44px;
+  padding: 0; /* iç boşluk yok → sığar */
+  padding-right: 20px;
+  padding-block: 5px;
+  background: var(--color-primary, #0d407c); /* mavi arka plan */
+  cursor: pointer;
+  border: none;
+}
+
+.bar {
+  width: 28px; /* 100% yerine sabit genişlik, daha güvenli */
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* X animasyonu (gap=6px varsayımıyla) */
+.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* MOBILE DRAWER (sağdan mavi panel) */
+.drawer {
+  position: fixed;
+  inset: 0 auto 0 auto; /* sadece sağdan görünür */
+  right: 0;
+  width: min(84vw, 320px);
+  height: 100dvh;
+  background: var(--brand-navy, #0c356a); /* mavi */
+  color: #fff;
+  transform: translateX(100%);
+  transition: transform 0.28s ease;
+  z-index: 60;
+  padding-top: 12px;
+}
+.drawer.show {
+  transform: translateX(0);
+}
+
+.mMenu {
+  list-style: none;
+  margin: 0;
+  padding: 8px 12px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.mLink {
+  display: block;
+  padding: 14px 12px;
+  color: #e6ecf3;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 8px;
+}
+.mLink:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.mActive {
+  background: #ffffff;
+  color: #0c356a;
+}
+
+.mLangRow {
+  margin-top: 8px;
+}
+.mLang {
+  background: #e7eaee;
+  color: #0c356a;
+}
+
+/* Backdrop */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 50;
+  border: 0;
+}
+.backdrop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .wrap {
+    background-color: var(--color-gray, #d9d9d9);
+
+    div:nth-child(1) {
+      padding: 0;
+    }
+  }
+  .menu {
+    display: none;
+  } /* desktop menü gizle */
+  .burgerBtn {
+    display: inline-flex;
+  }
+  .lang {
+    display: none;
+  } /* dil seçimini drawer’a taşıdık; ister görünür bırak */
+}

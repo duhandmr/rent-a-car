@@ -1,0 +1,104 @@
+.wrap {
+  position: relative;
+  padding: clamp(32px, 6vw, 56px) 0 24px;
+  background: #e7eaee;
+  border-top: 4px solid var(--brand-navy, #0c356a);
+  overflow: hidden;
+}
+
+/* Başlık */
+.title {
+  margin-top: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: var(--brand-navy, #0c356a);
+  font-weight: var(--font-bold, 700);
+  font-size: var(--lh-h3, 32px);
+}
+
+/* SAHNE: 2x2 grid (üst: araba+desc, alt: buton+siyah araba) */
+.stage {
+  display: grid;
+  row-gap: clamp(10px, 2vw, 10px); /* üst ve alt satır arası */
+  margin-top: clamp(24px, 4vw, 40px);
+}
+
+/* Üst satır */
+.topRow {
+  display: grid;
+  grid-template-columns: auto 1fr; /* sol: araba, sağ: desc */
+  align-items: center;
+  column-gap: clamp(16px, 4vw, 48px);
+}
+.leftCar {
+  width: clamp(320px, 44vw, 894px);
+  height: auto;
+  filter: drop-shadow(0 20px 36px rgba(0, 0, 0, 0.35));
+}
+.desc {
+  max-width: 560px;
+  color: var(--color-primary, #0d407c);
+  line-height: 1.6;
+  font-size: var(--lh-small, 20px);
+  text-align: center;
+}
+
+/* Alt satır — BUTON ve SİYAH ARABA AYNI DİVDE */
+.bottomRow {
+  display: grid;
+  grid-template-columns: auto 0fr; /* sol: buton, sağ: siyah araba */
+  align-items: end; /* alt hizaya yakın dursun */
+  column-gap: clamp(16px, 4vw, 48px);
+  margin-top: -206px;
+}
+.buttonDesc {
+  font-size: var(--fs-small, 14px);
+  font-weight: var(--font-regular, 400);
+  color: var(--color-primary, #0d407c);
+  text-align: center;
+}
+.cta {
+  padding: 10px 22px;
+  background: #fff;
+  color: var(--color-third, #000000);
+  font-weight: var(--font-semibold, 600);
+  justify-self: start; /* sol kolonda sola yasla */
+  width: 100%;
+  margin-bottom: 45px;
+  font-size: var(--fs-body, 16px);
+  border-color: var(--color-primary, #0d407c);
+}
+.rightCar {
+  width: clamp(300px, 42vw, 780px);
+  height: auto;
+  filter: drop-shadow(0 20px 36px rgba(0, 0, 0, 0.35));
+  pointer-events: none;
+  justify-self: end; /* sağ kolonda sağa yasla */
+}
+
+/* Mobil düzen */
+@media (max-width: 960px) {
+  .topRow {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .desc {
+    margin: 8px auto 0;
+    text-align: center;
+    max-width: 640px;
+  }
+
+  .bottomRow {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+    justify-items: center;
+  }
+  .cta {
+    justify-self: center;
+  }
+  .rightCar {
+    width: clamp(280px, 80vw, 680px);
+    justify-self: center;
+  }
+}

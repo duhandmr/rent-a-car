@@ -1,0 +1,13 @@
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto; /* oranı korur */
+  margin: 0 auto; /* görsel container'dan dar ise ortala */
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  .wrap {
+    display: none;
+  }
+}

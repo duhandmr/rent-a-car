@@ -1,0 +1,95 @@
+/* Dış kart (tamamen flex) */
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 375px; /* istersen küçült/büyüt */
+  border: 1px solid var(--color-primary, #0d407c);
+  margin-bottom: 30px;
+}
+
+/* Başlık */
+.header {
+  background: #0c356a;
+  color: #fff;
+  font-weight: 800;
+  text-align: center;
+  padding: 8px;
+  text-transform: capitalize;
+}
+
+/* Görsel kutusu */
+.media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secondary, #ffffff);
+}
+.img {
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Özellikler: sol ikon kolonu + sağ metin kolonu (flex) */
+.specs {
+  border-top: 1px solid var(--color-primary, #0d407c);
+  background-color: var(--color-secondary, #ffffff);
+  padding: 10px 12px;
+  display: flex; /* grid yok */
+  gap: 12px;
+}
+
+/* Kolonlar */
+.iconCol,
+.textCol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Sol ikon kolonu sabit genişlikte ortalı */
+.iconCol {
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sağ metin kolonu sağa hizalı ve esnek */
+.textCol {
+  flex: 1 1 auto;
+  align-items: flex-end; /* sağa hizala */
+}
+
+.iconItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.textItem {
+  text-align: right;
+  color: var(--color-primary, #0d407c);
+  font-weight: var(--font-regular, 400);
+  font-size: var(--lh-small, 20px);
+}
+
+.ctaExternal {
+  display: block;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background: var(--color-secondary, #ffffff);
+  border: 1px solid var(--color-primary, #0d407c);
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 700;
+}

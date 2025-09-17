@@ -1,0 +1,46 @@
+.noteContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  padding: 40px 0;
+}
+.note {
+  margin: 0;
+  text-align: center;
+  color: var(--color-green, #00ae00);
+  font-size: var(--lh-small, 20px);
+}
+
+.whatsFab {
+  position: absolute;
+  right: clamp(12px, 3vw, 30px);
+  transform: translateY(-50%);
+  bottom: 70px;
+  border-radius: 999px;
+  background: #22c55e;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+  transition: filter 0.15s ease, transform 0.08s ease;
+}
+.whatsFab:hover {
+  filter: brightness(1.06);
+  transform: translateY(calc(-50% - 1px));
+}
+
+@media (max-width: 640px) {
+  .noteContainer {
+    min-height: 64px;
+  }
+  .note {
+    padding-right: 72px;
+    font-size: 16px;
+  }
+  .whatsFab {
+    width: 48px;
+    height: 48px;
+    right: 12px;
+  }
+}

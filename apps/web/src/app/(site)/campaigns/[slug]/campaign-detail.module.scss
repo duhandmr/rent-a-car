@@ -1,0 +1,104 @@
+.main {
+  background: #e7eaee;
+  padding: clamp(24px, 5vw, 48px) 0;
+}
+
+/* Üst başlık */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: clamp(12px, 3vw, 70px);
+}
+.title {
+  margin: 0;
+  color: var(--color-primary, #0d407c);
+  font-weight: var(--font-bold, 700);
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  font-size: clamp(var(--ls-small, 12px), 2.1vw, var(--lh-h3, 32px));
+}
+
+/* İçerik: 2 kolon */
+.content {
+  display: flex;
+  gap: clamp(16px, 3vw, 28px);
+  align-items: stretch; /* sağ kolon soldakinin yüksekliğini alsın */
+}
+
+/* Sol görsel kutusu – doğal boyutta */
+.media {
+  margin: 0;
+  flex: 0 0 auto; /* ← sabit bir genişlik verme; içeriğe göre */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1px solid #9fb1c6;
+  border-radius: 2px;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Resmi büyütme! Doğal ölçüsünde kalsın */
+.img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%; /* dar ekranda taşmayı önler */
+}
+
+/* Sağ kolon */
+.right {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Üstte kalın mavi bar (::before) */
+.borderBox {
+  position: relative;
+  width: 100%;
+  flex: 0 0 auto;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 15px;
+    background: var(--color-primary, #0d407c);
+    border-radius: 2px;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
+    margin: 0 0 14px;
+  }
+}
+
+/* Barın altındaki KALAN alan: metni burada ortalıyoruz */
+.descWrap {
+  flex: 1 1 auto; /* kalan tüm yüksekliği kapla */
+  width: 100%;
+  display: flex;
+  align-items: center; /* dikey merkez */
+  justify-content: center; /* yatay merkez */
+}
+
+/* Metin */
+.desc {
+  margin: 0;
+  max-width: 720px;
+  text-align: center;
+  line-height: 1.6;
+  color: var(--color-primary, #0d407c);
+  font-size: clamp(14px, 1.7vw, 16px);
+}
+
+/* Responsive: kolonları alt alta al */
+@media (max-width: 960px) {
+  .content {
+    flex-direction: column;
+  }
+  .media {
+    width: 100%;
+  }
+}

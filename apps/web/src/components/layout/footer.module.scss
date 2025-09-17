@@ -1,0 +1,94 @@
+.footer {
+  position: relative;
+  color: #fff;
+  background: var(--brand-navy, #0c356a);
+  overflow: hidden;
+
+  /* Silüet / illüstrasyon (Figma'dan svg'yi /public/footer-illustration.svg olarak ekleyebilirsin) */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/footer-illustrate.svg") center/1200px no-repeat;
+    opacity: 1;
+    pointer-events: none;
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: var(--space-14, 58px);
+  padding-bottom: var(--space-16, 68px);
+  align-items: center;
+}
+
+.title {
+  margin: 0 0 var(--space-5, 20px);
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: var(--lh-body, 24px);
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-6, 24px);
+  text-align: center;
+  a {
+    color: #e8eef6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: var(--fs-body, 16px);
+  }
+  a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+}
+
+.info {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-3, 12px);
+
+  dt {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #d9e4f2;
+  }
+  dd {
+    margin: 0;
+    color: #ffffff;
+  }
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.bottomBar {
+  height: 8px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

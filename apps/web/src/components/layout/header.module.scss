@@ -1,0 +1,68 @@
+.header {
+}
+
+/* üst bar zemin */
+.topbar {
+  background: var(--color-gray, #d9d9d9);
+}
+
+/* === FLEX ROW === */
+.row {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* mobilde logo sol, whatsapp sağ */
+  gap: var(--space-6, 24px);
+  padding-block: var(--space-3, 12px);
+}
+
+/* ortak eleman davranışı */
+.row > * {
+  flex: 0 0 auto;
+}
+
+/* logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+/* ortadaki yazı (desktop’ta ortada genişleyip ortalanır) */
+.tagline {
+  flex: 1 1 auto; /* ortadaki alanı alsın */
+  text-align: center;
+  color: var(--color-third, #000000);
+  font-size: var(--fs-body, 16px);
+  font-weight: var(--font-regular, 400);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-inline: 8px; /* logo/whatsapp’tan nefes */
+}
+
+/* sağdaki whatsapp */
+.whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-green, #00ae00);
+  text-decoration: none;
+  font-size: var(--fs-small, 14px);
+  font-weight: var(--font-regular, 400);
+  text-transform: uppercase;
+}
+.whatsapp:hover {
+  opacity: 0.9;
+}
+
+/* mobil düzen */
+@media (max-width: 960px) {
+  .tagline {
+    display: none;
+  } /* yalnızca logo + whatsapp kalsın */
+  .row {
+    gap: 12px;
+  } /* biraz sıkılaştır */
+}

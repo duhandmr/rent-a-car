@@ -1,0 +1,14 @@
+.hero {
+  padding: 64px 0;
+  background: #f8fafc;
+}
+.searchBox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  align-items: end;
+}
+.note {
+  color: var(--muted);
+  margin-top: 8px;
+}

@@ -1,0 +1,28 @@
+.wrap {
+  background: #e7eaee;
+  padding: clamp(8px, 3vw, 16px) 0 clamp(24px, 6vw, 56px);
+}
+
+/* "ABOUT" — harf araları açılmış */
+.kicker {
+  margin: 0 0 clamp(10px, 2.4vw, 18px);
+  text-align: center;
+  color: #0c356a;
+  text-transform: uppercase;
+  letter-spacing: 0.45em;
+  font-weight: 800;
+  font-size: clamp(16px, 2.2vw, 20px);
+}
+
+.copy {
+  max-width: 920px;
+  margin: 0 auto;
+  color: #0d407c;
+  text-align: center;
+  line-height: 1.7;
+  display: grid;
+  gap: clamp(10px, 2vw, 14px);
+  p {
+    margin: 0;
+  }
+}

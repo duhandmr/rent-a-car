@@ -1,0 +1,19 @@
+.topContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-size: var(--lh-h3, 32px);
+  font-weight: var(-font-bold, 700);
+  color: var(--color-primary, #0d407c);
+  letter-spacing: 0.4em;
+}
+
+.note {
+  font-size: var(--fs-body, 16px);
+  font-weight: var(-font-regular, 400);
+  color: var(--color-primary, #0d407c);
+}

@@ -1,0 +1,45 @@
+/* Design Tokens — fill from Figma (Inspect panel) */
+/* PALETTE (Base) */
+:root {
+  /* Colors (Base) */
+  --color-primary: #0d407c;
+  --color-secondary: #ffffff;
+  --color-third: #000000;
+  --color-green: #00ae00;
+
+  --color-gray: #d9d9d9;
+
+  /* Semantic Colors */
+  --bg:          /* e.g. #ffffff */ ;
+  --surface:     /* e.g. #ffffff */ ;
+  --text:        /* e.g. #0f172a */ ;
+  --muted-text:  /* e.g. #475569 */ ;
+  --border:      /* e.g. #e5e7eb */ ;
+  --link: var(--color-primary);
+
+  /* Spacing Scale (px) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-13: 52px;
+  --space-14: 58px;
+  --space-16: 68px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  /* Layout */
+  --container: 1700px;
+}

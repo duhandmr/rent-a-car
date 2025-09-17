@@ -1,0 +1,55 @@
+@import "../styles/tokens.scss";
+@import "../styles/typography.scss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: var(--font-sans);
+  height: 100%;
+  overflow-x: hidden;
+}
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.site-footer {
+  padding: var(--space-8) 0;
+  color: var(--muted-text);
+}
+
+.hero {
+  padding: var(--space-12) 0;
+  background: var(--gray-50);
+}
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+.imgWrap {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}

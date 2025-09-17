@@ -1,0 +1,86 @@
+.wrap {
+  padding: clamp(28px, 6vw, 56px) 0;
+  background: #e7eaee;
+  position: relative;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+}
+.title {
+  margin: 0 0 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: var(--color-primary, #0d407c);
+  font-weight: var(--font-bold, 700);
+  font-size: var(--lh-h3, 32px);
+}
+.keywords {
+  display: flex;
+  justify-content: center;
+  gap: clamp(24px, 8vw, 90px);
+  list-style: none;
+  padding: 0;
+  margin: 0 0 clamp(12px, 4vw, 24px);
+}
+.keywords li {
+  font-family: "Mr Dafoe";
+  font-size: clamp(28px, 5vw, 96px);
+  font-weight: var(--font-medium, 500);
+  font-style: italic;
+  color: var(--color-primary, #0d407c);
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* CARS */
+.carsRow {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: clamp(16px, 6vw, 56px);
+  margin: clamp(8px, 3vw, 24px) 0;
+}
+.car {
+  width: clamp(280px, 38vw, 560px);
+  height: auto;
+  filter: drop-shadow(0 20px 36px rgba(0, 0, 0, 0.35));
+  pointer-events: none;
+}
+
+/* DESCRIPTION */
+.desc {
+  max-width: 860px;
+  margin: 0 auto clamp(10px, 3vw, 16px);
+  text-align: center;
+  line-height: 1.6;
+  color: var(--color-primary, #0d407c);
+  font-size: var(--lh-small, 20px);
+  font-weight: var(--font-regular, 400);
+  margin-bottom: 40px;
+}
+
+/* CTA BUTTON */
+.ctaWrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+.cta {
+  width: min(520px, 90%);
+  height: 42px;
+  background: var(--color-secondary, #ffffff);
+  border: 1px solid var(--color-primary, #0d407c);
+  font-weight: 700;
+  color: var(--color-third, #000000);
+}
+
+/* Responsive tweaks */
+@media (max-width: 960px) {
+  .keywords {
+    gap: clamp(16px, 6vw, 28px);
+  }
+  .car {
+    width: clamp(260px, 80vw, 520px);
+  }
+}

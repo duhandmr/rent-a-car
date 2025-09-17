@@ -1,0 +1,23 @@
+/* Sayfa ana sarmalayıcı: tam ekran + absolute çocuklar için referans */
+.wrap {
+  position: relative;
+  overflow: hidden;
+  background: #e7eaee;
+
+  /* fallback önce */
+  padding-top: 120px;
+
+  min-height: 100vh;
+
+  /* mobilde doğru yükseklik için dinamik vh */
+  @supports (min-height: 100dvh) {
+    min-height: 100dvh;
+  }
+
+  .bottomStick {
+    margin-top: auto; /* ← sihir burada */
+    padding-top: 200px;
+  }
+
+  /* içerikle boşluklar hero/content içinde yönetilecek */
+}

@@ -1,0 +1,58 @@
+.wrap {
+  position: relative;
+  width: 100%;
+  isolation: isolate; /* overlay katmanları için */
+}
+
+/* Görsel */
+.img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* Üstte hafif karartma */
+.wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.25)
+  );
+}
+
+/* Metin kutusu – tam ortaya yerleşsin */
+.textContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 2; /* karartmanın üstünde */
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: clamp(8px, 4vw, 24px);
+  color: #fff;
+}
+
+/* Büyük başlık */
+.text {
+  margin: 0 0 35px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: 0.12em; /* yatayda biraz uzun hissi */
+  font-size: var(--lh-body, 24px);
+  max-width: 26ch; /* 2-3 satırda güzel kırılır */
+}
+
+/* Alt açıklama */
+.desc {
+  display: block;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 600;
+  font-size: var(--ls-h4, 18px);
+}

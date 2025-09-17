@@ -1,0 +1,6 @@
+.img {
+  width: 100%; /* konteyner genişliğine sığ */
+  height: auto; /* oranı koru */
+  display: block; /* altındaki boşluğu kaldırır */
+  max-width: 100%; /* ekstra güvenlik */
+}

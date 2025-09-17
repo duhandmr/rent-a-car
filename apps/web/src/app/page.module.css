@@ -1,0 +1,11 @@
+/* varsayılan: desktop → gizli */
+.onlyMobile {
+  display: none;
+}
+
+/* mobilde göster */
+@media (max-width: 960px) {
+  .onlyMobile {
+    display: block;
+  }
+}

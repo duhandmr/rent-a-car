@@ -1,0 +1,24 @@
+.grid {
+  --gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+/* Kartlar sabit 375px */
+.grid > * {
+  flex: 0 0 375px;
+  max-width: 375px;
+}
+
+@media (max-width: 420px) {
+  .grid {
+    justify-content: center;
+  }
+  .grid > * {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}

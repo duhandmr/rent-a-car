@@ -1,0 +1,96 @@
+/* Dış sarmalayıcı: article + buton birlikte */
+.cardItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 375px; /* tek noktadan kontrol */
+}
+
+/* Dış kart (tamamen flex) */
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--color-primary, #0d407c);
+  background: var(--color-secondary, #ffffff);
+  margin-bottom: 30px;
+}
+
+/* Başlık */
+.header {
+  background: var(--color-primary, #0d407c);
+  color: #fff;
+  font-weight: var(--font-medium, 500);
+  text-align: center;
+  padding: 12px 0 0 0;
+  text-transform: capitalize;
+  font-size: var(--fs-body, 16px);
+  width: 375px;
+  height: 71px;
+}
+
+/* Görsel kutusu */
+.media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secondary, #ffffff);
+  border-top: 1px solid var(--color-primary, #0d407c);
+}
+.img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Açıklama alanı (foto altı) */
+.descBox {
+  border-top: 1px solid var(--color-primary, #0d407c);
+  background-color: var(--color-secondary, #ffffff);
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.descText {
+  margin: 0;
+  text-align: center;
+  color: var(--color-primary, #0d407c);
+  font-weight: var(--font-regular, 400);
+  font-size: var(--fs-small, 14px);
+  line-height: 1.5;
+  padding: 10px;
+}
+
+/* Buton (article DIŞI) */
+.ctaExternal {
+  display: block;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background: var(--color-secondary, #ffffff);
+  border: 1px solid var(--color-primary, #0d407c);
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.06s ease, filter 0.15s ease;
+}
+
+/* Kartla görsel bağ: kart hover/focus olunca buton parlasın */
+.card:hover + .ctaExternal,
+.card:focus-within + .ctaExternal {
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+}
+.ctaExternal:hover {
+  filter: brightness(1.06);
+}
+
+/* (İsteğe bağlı) mobilde tam genişlik */
+@media (max-width: 420px) {
+  .cardItem {
+    width: 100%;
+  }
+}

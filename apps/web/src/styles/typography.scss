@@ -1,0 +1,28 @@
+/* Typography */
+:root {
+  /* Ağırlıklar */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Boyutlar – Figma değerlerinle değiştir */
+  --fs-h1: 48px;
+  --lh-h1: 56px;
+  --ls-h1: 0;
+  --fs-h2: 36px;
+  --lh-h2: 44px;
+  --ls-h2: 0;
+  --fs-h3: 28px;
+  --lh-h3: 32px;
+  --ls-h3: 0;
+  --fs-h4: 22px;
+  --lh-h4: 30px;
+  --ls-h4: 18px;
+  --fs-body: 16px;
+  --lh-body: 24px;
+  --ls-body: 0;
+  --fs-small: 14px;
+  --lh-small: 20px;
+  --ls-small: 12px;
+}
