@@ -1,0 +1,21 @@
+{
+  "name": "rent-a-car-root",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run --workspaces dev",
+    "build": "npm run --workspaces build",
+    "start": "npm run --workspaces start",
+    "lint": "npm run --workspaces lint",
+    "seed:mongo": "npm run --workspace=@rac/api seed:mongo"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=20",
+    "npm": ">=9"
+  }
+}
